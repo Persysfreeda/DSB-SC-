@@ -48,12 +48,45 @@ Model Waveform
 <img width="703" height="679" alt="image" src="https://github.com/user-attachments/assets/e7c7c7f8-ccf2-41ac-b1f3-325989941a6f" />
 
 Program
-
+```
+clc;
+clear;
+close;
+Ac=16.6;
+Am=8.3;
+Fc=4000;
+Fm=400;
+Fs=50000;
+t=0:1/Fs:2/Fm;
+wm=2*3.14*Fm;
+wc=2*3.14*Fc;
+E1=Am*sin(2*3.14*Fm*t);
+subplot(3,1,1);
+plot(t,E1);
+xlabel("Time(s)");
+ylabel("Amplitude");
+title("Message Signal m(t)");
+E2=Ac*sin(2*3.14*Fc*t);
+subplot(3,1,2);
+plot(t,E2);
+xlabel("Time(s)");
+ylabel("Amplitude");
+title("Carrier Signal c(t)");
+E3=((Am/2)*cos((wc-wm)*t))-((Am/2)*cos((wc+wm)*t));
+subplot(3,1,3)
+plot(t,E3);
+xlabel("Time(s)");
+ylabel("Amplitude");
+title("DSB-SC Modulated Signal s(t)");
+xgrid();
+```
 Output Graph
-
+<img width="1612" height="835" alt="image" src="https://github.com/user-attachments/assets/8cae6ddf-0b6b-41e0-ba61-daab2cfdd0e0" />
 
 Tablular Column
+<img width="1048" height="953" alt="image" src="https://github.com/user-attachments/assets/e7ba619a-3f56-4123-b7e5-57294441c340" />
 
+<img width="661" height="916" alt="image" src="https://github.com/user-attachments/assets/e308b838-6a91-435d-96b0-90f89c1fc16d" />
 
 Result
 
