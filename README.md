@@ -95,5 +95,6 @@ Tablular Column
 
 Result
 
-Thus the DSB-SC-AM Modulation and Demodulation is generated.
+<img width="983" height="377" alt="image" src="https://github.com/user-attachments/assets/931cf2a1-fbce-4a93-9a26-2246b3bc564b" />
+
 
